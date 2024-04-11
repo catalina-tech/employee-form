@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <title>Employee Form</title>
+    <link rel="stylesheet" href="style.css">
+
+   
+</head>
+
+<body>
+    <main>
+        <h1>Employee Information Form </h1>
+
+                                                    <!--COMPANY INFORMATION OF THE EMPLOYEE-->
+
+    <form id="companyInformation"> 
+
+        <fieldset>
+
+        <legend>Company Information</legend>
+
+<figure>
+    <!-- <label for="image" src="C:\Users\catab\Pictures\Pictures\Fotos Jardin\Celular\tmp_05cd8121-f7b6-4e87-98d0-d198ffaf9311.jpeg">Image</label> -->
+    <image src="C:\Users\catab\Pictures\Pictures\Fotos Jardin\Celular\tmp_05cd8121-f7b6-4e87-98d0-d198ffaf9311.jpeg"  width="250px" id="image" title="employee Picture">
+    <!-- <figcaption>Employee Picture</figcaption> -->
+    <br><button onclick="browser();">Browse</button>
+    </figure>
+
+<p>
+
+<!--Employee ID-->
+<label for="employeeId">Employee ID:</label><br>
+<input type="text" id="employeeId">
+<strong><abbr title="required">*</abbr></strong>
+
+</p>
+
+<p>
+
+    
+    <label for="courtesyTitle">Courtesy Title:</label>
+
+    <p>
+
+    <input type="text" list="courtesyTitleList">
+
+    <datalist id="courtesyTitleList">
+        <option>Ms.</option>
+        <option>Miss.</option>
+        <option>Mrs.</option>
+        <option>Mr.</option>
+    </datalist>
+
+</p>
+
+<p>
+
+<!--Employee's name-->
+ <label for="name">Name:</label> <br><!--for and id must be the same-->
+ <input type="text" id="name" autocomplete="given-name" pattern="[a-zA-Z0-9]+">
+ <strong><abbr title="required">*</abbr></strong>
+
+<!--Employee title-->
+<p>
+    <label for="title">Title:</label><br>
+    <input type="text" id="title">
+</p>
+
+<!--Employee report to-->
+<p>    
+    <label for="report">Reports to:</label><br>
+    <input type="text" id="report">
+</p>
+
+<!--Employee hire date-->
+<p>
+    <label for="hireDate">Hire date:</label><br>
+    <input type="date" id="hireDate" pattern="(?:(?:0[1-9]|1[0-2])[\/\\-. ]?(?:0[1-9]|[12][0-9])|(?:(?:0[13-9]|1[0-2])[\/\\-. ]?30)|(?:(?:0[13578]|1[02])[\/\\-. ]?31))[\/\\-. ]?(?:19|20)[0-9]{2}">
+    <strong><abbr title="required">*</abbr></strong>
+</p>
+
+<!--Employee phone number-->
+<div class="form-row">
+
+    <div class="input-group">
+        <label for="phoneNumber">Phone Number:</label><br>
+        <input type="tel" id="phoneNumber" placeholder="55 55 55 55" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" autocomplete="tel-local">
+    </div>
+    
+    <div class="input-group" class="email">
+        <label for="email" class="email">Email:</label><br>
+        <input type="email" id="email" class="email" autocomplete="email">
+    </div>
+</div>
+
+
+    </fieldset>
+    
+</form>
+
+                                                    <!--PERSONAL INFORMATION OF THE EMPLOYEE-->
+
+    <form id="personalInformation">
+
+        <fieldset>
+
+        <legend>Personal Information</legend>
+
+        <!--Employee courtesy title-->
+        
+            <!-- <fieldset id="coustesyTitle">
+
+            <legend>Courtesy Title:</legend>
+
+          
+
+            <label for="mr" class="checkboxes">Mr.</label>
+            <input type="checkbox" id="mr" class="checkboxes">
+
+           
+   
+
+            <label for="mrs" class="checkboxes">Mrs.</label>
+            <input type="checkbox" id="mrs" class="checkboxes">
+
+            
+
+          
+
+            <label for="miss" class="checkboxes">Miss.</label>
+            <input type="checkbox" id="miss" class="checkboxes">
+
+           
+
+            
+
+            <label for="ms" class="checkboxes">Ms.</label>
+            <input type="checkbox" id="ms" class="checkboxes">
+
+           
+
+            </fieldset> -->
+        
+
+        <!--Employee adress-->
+        <div class="form-row">
+
+            <div class="input-group">
+
+            <label for="adress">Adress:</label> <br>
+            <input type="text" id="adress">
+
+            </div>
+                   
+            <div class="input-group" class="postalCode">
+                 <!--Employee postal code-->
+                   
+            <label for="postalCode" class="postalCode">Postal Code (Danish & Faroe Island Postal Code):</label><br>
+            <input type="text" id="postalCode" class="postalCode" pattern="[0-9]{3,4}"> <!--For postal codes remember to use text not number and pattern-->
+           
+            </div>
+        </div>
+        
+         
+
+        <!--Employee city-->
+        <p>
+            <label for="city">City:</label><br>
+            <input type="text" id="city">
+        </p>
+
+        <!--Employee birthday-->
+        <p>
+            <label for="birthday">birthday:</label><br>
+            <input type="date" id="birthday" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d"> 
+        </p>
+
+        <!--Employee notes-->
+        <p>
+            <label for="notes">Notes:</label><br>
+            <textarea id="notes" name="notesText"></textarea>
+            <!-- <input type="text" id="notes"> -->
+        </p>
+
+    </fieldset>
+
+    </form>
+
+    <button onclick="save();">Save</button>
+    <button onclick="reset();">Reset</button>
+    <button onclick="edit();">Edit</button>
+
+
+</main>
+
+
+
+
+</body>
+</html>
